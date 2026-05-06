@@ -17,7 +17,7 @@
 
         <form  method="POST" id="uploadForm" action="{{route('NmRegisterBtn')}}">
             @csrf
-            {{-- Name --}}
+            <!--Name-->
             <div class="form-group ms-lg-4 me-lg-4 mt-4">
                 <label>Your Full Name</label>
                 <div class="input-group" style="border: 2px solid #ddd; background-color:white; border-radius: 10px; padding: 5px;">
@@ -32,17 +32,30 @@
 
            
 
-            {{-- email --}}
+           <!-- Phone -->
             <div class="form-group ms-lg-4 me-lg-4 mt-2">
-                <label>Your Email Id</label>
+                <label>Your Phone Number</label>
                 <div class="input-group" style="border: 2px solid #ddd; background-color:white; border-radius: 10px; padding: 5px;">
                     <span class="input-group-text" style="border: none; background-color: transparent;">
                         <i class="fa fa-phone text-primary" aria-hidden="true"></i>
                     </span>
-                    <input type="text" id="email"  name="email" value="{{old('email')}}"   class="form-control" placeholder="Enter Email"  style="border:none; border-radius: 5px;"/>                                             
-                </div>
-                
+                    <input type="text" id="phone"  name="phone" value="{{old('email')}}"   class="form-control" placeholder="Enter Phone"  style="border:none; border-radius: 5px;"/>                                             
+                </div>    
             </div>
+
+
+            
+            <!-- Password -->
+            <div class="form-group ms-lg-4 me-lg-4 mt-2">
+                <label>Your Password</label>
+                <div class="input-group" style="border: 2px solid #ddd; background-color:white; border-radius: 10px; padding: 5px;">
+                    <span class="input-group-text" style="border: none; background-color: transparent;">
+                        <i class="fa fa-password text-primary" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" id="password"  name="password" value="{{old('password')}}"   class="form-control" placeholder="Enter Password"  style="border:none; border-radius: 5px;"/>                                             
+                </div>  
+            </div>
+
 
                <div class="form-group mt-4 text-center">
                  <input type="submit" id="uploadBtn"  class="btn btn-success fw-bold" value="Register" style="border-radius: 30px; width:300px">              

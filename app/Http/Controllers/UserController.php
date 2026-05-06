@@ -52,7 +52,7 @@ class UserController extends Controller
 
     'phone.required' => 'Please enter your phone Bunu',
     'phone.digits' => 'Phone must be 10 digits Bunu',
-    'phone.unique' => '❌ This phone is already Exist Bunu',
+    'phone.unique' => 'This phone is already Exist Bunu',
 
     'password.required' => 'Please enter your Password Bunu',
     'password.min' => 'Password must be at least 6 characters Bunu',
@@ -167,7 +167,6 @@ class UserController extends Controller
     public function MtdUserDeleteBtn($id)
     {
         $user = User::find($id);
-
         $user->delete();
 
         return response()->json([
